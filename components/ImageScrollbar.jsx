@@ -41,7 +41,7 @@ export default function ImageScrollbar({ data }) {
             position: 'absolute',
             left: '15px', // Close to the left of the container
             top: '50%', // Vertically centers the button
-            transform: 'translateY(-50%)',
+            transform: 'translateY(520%)',
             fontSize: '2rem',
             backgroundColor: '#fff',
             boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
@@ -102,7 +102,7 @@ export default function ImageScrollbar({ data }) {
             position: 'absolute',
             right: '15px', // Close to the right of the container
             top: '50%', // Vertically centers the button
-            transform: 'translateY(-50%)',
+            transform: 'translateY(-630%)',
             fontSize: '2rem',
             backgroundColor: '#fff',
             boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',

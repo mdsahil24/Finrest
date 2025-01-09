@@ -11,7 +11,7 @@ const Footer = () => (
     }}
   >
     <Typography variant="body2" color="textSecondary">
-      © 2021 Realtor, Inc.
+      © 2025 Finrest, Inc.
     </Typography>
   </Box>
 );
