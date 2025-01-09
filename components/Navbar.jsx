@@ -22,25 +22,29 @@ const Navbar = () => {
         borderBottom: '1px solid #e0e0e0',
         color: '#2F85DF',
         boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.1)',
-        padding: '0 24px',
+        padding: { xs: '0 16px', sm: '0 24px' }, // Adjust padding for mobile
       }}
     >
       <Toolbar>
         {/* Website Title */}
-        <Typography variant="h5" fontWeight="bold" sx={{ flexGrow: 1 }}>
+        <Typography
+          variant="h5"
+          fontWeight="bold"
+          sx={{ flexGrow: 1, fontSize: { xs: '1.2rem', sm: '1.5rem' } }} // Adjust font size for mobile
+        >
           <Link href="/" passHref>
-          <Box
+            <Box
               component="a"
               sx={{
                 textDecoration: 'underline',
-                textDecorationColor: 'white', // Default underline color set to white
+                textDecorationColor: 'white',
                 color: '#2F85DF',
                 '&:hover': {
-                  textDecorationColor: '#FFFFFF', // Change underline color on hover
+                  textDecorationColor: '#FFFFFF',
                 },
               }}
             >
-              Finrest 
+              Finrest
             </Box>
           </Link>
         </Typography>
@@ -53,6 +57,7 @@ const Navbar = () => {
             onClick={handleMenuOpen}
             sx={{
               color: '#2F85DF',
+              fontSize: '2rem', // Adjust the size of the icon
               '&:hover': {
                 backgroundColor: 'rgba(47, 133, 223, 0.1)',
               },
@@ -72,15 +77,16 @@ const Navbar = () => {
             <MenuItem onClick={handleMenuClose}>
               <Link href="/" passHref>
                 <Box
-                component="a"
-                sx={{
+                  component="a"
+                  sx={{
                     textDecoration: 'underline',
-                    textDecorationColor: 'white', // Default underline color set to white
+                    textDecorationColor: 'white',
                     color: '#2F85DF',
+                    fontSize: { xs: '0.9rem', sm: '1rem' }, // Adjust font size for mobile
                     '&:hover': {
-                    textDecorationColor: '#FFFFFF', // Change underline color on hover
+                      textDecorationColor: '#FFFFFF',
                     },
-                }}
+                  }}
                 >
                   <Home sx={{ marginRight: 1 }} /> Home
                 </Box>
@@ -89,17 +95,18 @@ const Navbar = () => {
             <MenuItem onClick={handleMenuClose}>
               <Link href="/search" passHref>
                 <Box
-                component="a"
-                display="flex"
-                alignItems="center"
-                sx={{
+                  component="a"
+                  display="flex"
+                  alignItems="center"
+                  sx={{
                     textDecoration: 'underline',
-                    textDecorationColor: 'white', // Default underline color set to white
+                    textDecorationColor: 'white',
                     color: '#2F85DF',
+                    fontSize: { xs: '0.9rem', sm: '1rem' },
                     '&:hover': {
-                    textDecorationColor: '#FFFFFF', // Change underline color on hover
+                      textDecorationColor: '#FFFFFF',
                     },
-                }}
+                  }}
                 >
                   <Search sx={{ marginRight: 1 }} /> Search
                 </Box>
@@ -108,36 +115,38 @@ const Navbar = () => {
             <MenuItem onClick={handleMenuClose}>
               <Link href="/search?purpose=for-sale" passHref>
                 <Box
-                    component="a"
-                    display="flex"
-                    alignItems="center"
-                    sx={{
-                        textDecoration: 'underline',
-                        textDecorationColor: 'white', // Default underline color set to white
-                        color: '#2F85DF',
-                        '&:hover': {
-                        textDecorationColor: '#FFFFFF', // Change underline color on hover
-                        },
-                    }}
-                    >
+                  component="a"
+                  display="flex"
+                  alignItems="center"
+                  sx={{
+                    textDecoration: 'underline',
+                    textDecorationColor: 'white',
+                    color: '#2F85DF',
+                    fontSize: { xs: '0.9rem', sm: '1rem' },
+                    '&:hover': {
+                      textDecorationColor: '#FFFFFF',
+                    },
+                  }}
+                >
                   <Info sx={{ marginRight: 1 }} /> Buy Property
                 </Box>
               </Link>
             </MenuItem>
             <MenuItem onClick={handleMenuClose}>
               <Link href="/search?purpose=for-rent" passHref>
-              <Box
-                component="a"
-                display="flex"
-                alignItems="center"
-                sx={{
+                <Box
+                  component="a"
+                  display="flex"
+                  alignItems="center"
+                  sx={{
                     textDecoration: 'underline',
-                    textDecorationColor: 'white', // Default underline color set to white
+                    textDecorationColor: 'white',
                     color: '#2F85DF',
+                    fontSize: { xs: '0.9rem', sm: '1rem' },
                     '&:hover': {
-                    textDecorationColor: '#FFFFFF', // Change underline color on hover
+                      textDecorationColor: '#FFFFFF',
                     },
-                }}
+                  }}
                 >
                   <Info sx={{ marginRight: 1 }} /> Rent Property
                 </Box>

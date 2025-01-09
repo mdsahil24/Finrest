@@ -34,23 +34,13 @@ export default function ImageScrollbar({ data }) {
       }}
     >
       {/* Left Arrow */}
-      <Box 
-        display="flex" 
-        justifyContent="center" 
-        alignItems="center" 
-        position="absolute" 
-        left={0} 
-        zIndex={1}
-        sx={{
-          display: { xs: 'none', sm: 'flex' }, // Hide on small screens
-        }}
-      >
+      <Box display="flex" justifyContent="center" alignItems="center" position="absolute" left={0} zIndex={1}>
         <IconButton
           onClick={scrollPrev}
           sx={{
             position: 'absolute',
-            left: '15px', // Adjusted for smaller screens
-            top: '50%',
+            left: '15px', // Close to the left of the container
+            top: '50%', // Vertically centers the button
             transform: 'translateY(520%)',
             fontSize: '2rem',
             backgroundColor: '#fff',
@@ -70,7 +60,7 @@ export default function ImageScrollbar({ data }) {
         sx={{
           display: 'flex',
           overflowX: 'auto',
-          scrollBehavior: 'smooth',
+          scrollBehavior: 'smooth', // Ensures smooth scrolling
           gap: '10px',
           '&::-webkit-scrollbar': { display: 'none' }, // Hide scrollbar for Webkit browsers
           '-ms-overflow-style': 'none', // Hide scrollbar for IE and Edge
@@ -82,10 +72,8 @@ export default function ImageScrollbar({ data }) {
             key={item.id}
             sx={{
               flex: '0 0 auto',
-              width: '85%', // Adjust width for mobile and tablet
-              maxWidth: '940px', // Maximum width for larger screens
+              width: '940px', // Adjust width as needed
               overflow: 'hidden',
-              margin: '0 auto',
             }}
           >
             <Image
@@ -95,7 +83,7 @@ export default function ImageScrollbar({ data }) {
               alt={`Image ${item.id}`}
               width={1000}
               height={500}
-              sizes="(max-width: 500px) 100vw, (max-width: 1023px) 80vw, 1000px"
+              sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px"
               style={{
                 borderRadius: '1px',
                 boxShadow: '0 3px 6px rgba(0, 0, 0, 0.1)',
@@ -107,23 +95,13 @@ export default function ImageScrollbar({ data }) {
       </Box>
 
       {/* Right Arrow */}
-      <Box 
-        display="flex" 
-        justifyContent="center" 
-        alignItems="center" 
-        position="absolute" 
-        right={0} 
-        zIndex={1}
-        sx={{
-          display: { xs: 'none', sm: 'flex' }, // Hide on small screens
-        }}
-      >
+      <Box display="flex" justifyContent="center" alignItems="center" position="absolute" right={0} zIndex={1}>
         <IconButton
           onClick={scrollNext}
           sx={{
             position: 'absolute',
-            right: '15px', // Adjusted for smaller screens
-            top: '50%',
+            right: '15px', // Close to the right of the container
+            top: '50%', // Vertically centers the button
             transform: 'translateY(-630%)',
             fontSize: '2rem',
             backgroundColor: '#fff',
