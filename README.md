@@ -1,6 +1,6 @@
-# FINREST (REAL ESTATE PLATFORM) 🏢
+# FINREST (Property Exploration Platform) 🏢
 
-A comprehensive and user-friendly real estate platform where users can explore properties available for buying and renting. This platform offers an intuitive and clean interface, enabling users to easily filter property details and find their ideal homes, villas, or apartments.
+A comprehensive and user-friendly Property Exploration Platform where users can explore properties available for buying and renting. This platform offers an intuitive and clean interface, enabling users to easily filter property details and find their ideal homes, villas, or apartments.
 
 ## Features 🎮
 
